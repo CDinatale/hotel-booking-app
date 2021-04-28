@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<form class="searchbar" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <input type="radio" value="name" formControlName="hotel_name" > By Name
+  <input type="radio" value="city" formControlName="hotel_city"> By City<br>
+  <input type="text" class="search-container" placeholder="Search.." formControlName="hotel_search">
+  <button type="submit" class="search-button">Search</button>
+</form>
+<div class="hotel-container">
+<div *ngFor="let hotel of hotels">
+  <div class="card bg-light mb-3" style="max-width: 40rem;">
+    <div class="card-header"><b>{{hotel.hotel_name}}</b></div>
+    <div class="card-body">
+      <p class="card-text"><b>Address:</b> {{hotel.street}}, {{hotel.city}}, {{hotel.postal_code}}</p>
+      <p class="card-text"><b>Email:</b> {{hotel.email}}</p>
+      <p class="card-text"><b>Price:</b> ${{hotel.price}} per night</p>
+      <a routerLink="/book-hotel" class="btn btn-primary">Book</a>
+    </div>
+  </div>
+</div>
+</div>
+

@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="booking-container">
+<div *ngFor="let booking of bookings">
+  <div class="card bg-light mb-3" style="max-width: 40rem;">
+    <div class="card-header"><b>{{booking.hotel_name}} Booking</b></div>
+    <div class="card-body">
+      <p class="card-text"><b>Created on:</b> {{booking.booking_date}}</p>
+      <p class="card-text"><b>Booking Start Date:</b> {{booking.booking_start}}</p>
+      <p class="card-text"><b>Booking End Date:</b> {{booking.booking_end}}</p>
+    </div>
+  </div>
+</div>
+</div>

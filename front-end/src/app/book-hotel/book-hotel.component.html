@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="login-form">
+  <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+      <h2 class="text-center">Book Hotel</h2>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Hotel name" required="required" formControlName="hotel_name">
+    </div>
+      <div class="form-group">
+          <input type="date" class="form-control" placeholder="Booking start date" required="required" formControlName="booking_start">
+      </div>
+      <div class="form-group">
+          <input type="date" class="form-control" placeholder="Booking end date" required="required" formControlName="booking_end">
+      </div>
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block">Book Hotel</button>
+      </div>
+  </form>
+</div>

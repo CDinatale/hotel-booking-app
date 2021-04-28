@@ -1,0 +1,19 @@
+.hotel-container{
+  padding-top: 100px;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.searchbar{
+  margin-top: 100px;
+  margin-left: 240px;
+}
+
+.search-container{
+  height:36px;
+  width: 300px
+}
+
+.search-button{
+ height: 36px
+}
